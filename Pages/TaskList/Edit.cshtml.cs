@@ -18,10 +18,19 @@ namespace ToDoApplication.Pages.TaskList
         public EditModel(ToDoApplication.DAL.AppDbContext context)
         {
             _context = context;
+
+            AssigntoOptions = new List<SelectListItem>
+            {
+                new SelectListItem { Value = "Santhush", Text = "Santhush" },
+                new SelectListItem { Value = "Dinuwara", Text = "Dinuwara" },
+                new SelectListItem { Value = "Devin", Text = "Devin" }
+            };
         }
 
         [BindProperty]
         public ToDoItem ToDoItem { get; set; } = default!;
+
+        public List<SelectListItem> AssigntoOptions { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

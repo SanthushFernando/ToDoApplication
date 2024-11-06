@@ -17,6 +17,13 @@ namespace ToDoApplication.Pages.TaskList
         public CreateModel(ToDoApplication.DAL.AppDbContext context)
         {
             _context = context;
+
+            AssigntoOptions = new List<SelectListItem>
+        {
+            new SelectListItem { Value = "Santhush", Text = "Santhush" },
+            new SelectListItem { Value = "Dinuwara", Text = "Dinuwara" },
+            new SelectListItem { Value = "Devin", Text = "Devin" }
+        };
         }
 
         public IActionResult OnGet()
@@ -26,6 +33,7 @@ namespace ToDoApplication.Pages.TaskList
 
         [BindProperty]
         public ToDoItem ToDoItem { get; set; } = default!;
+        public List<SelectListItem> AssigntoOptions { get; set; }
 
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()

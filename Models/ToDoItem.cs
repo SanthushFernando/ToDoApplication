@@ -15,5 +15,9 @@ namespace ToDoApplication.Models
         [Required]
         [DisplayName("Status")]
         public String IsCompleted { get; set; }
+
+        [Required]
+        [DisplayName("Assigned To")]
+        public String Assignto { get; set; }
     }
 }
