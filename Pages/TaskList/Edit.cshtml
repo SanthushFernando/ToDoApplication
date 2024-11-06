@@ -5,9 +5,9 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Edit Task</h1>
 
-<h4>ToDoItem</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -24,16 +24,16 @@
                 <input asp-for="ToDoItem.IsCompleted" class="form-control" />
                 <span asp-validation-for="ToDoItem.IsCompleted" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-page="./Index" class="btn btn-success">Back to List</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-page="./Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
