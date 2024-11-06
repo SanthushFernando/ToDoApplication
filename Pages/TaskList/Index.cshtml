@@ -5,11 +5,18 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Task List</h1>
+<div class="d-flex flex-row justify-content-between mt-4">
+    <div>
+        <h1>Task List</h1>
+    </div>
+    <div>
+        <a asp-page="Create" class="btn btn-primary">Create New</a>
+      </div>
 
-<p>
-    <a asp-page="Create" class="btn btn-primary">Create New</a>
-</p>
+</div>
+
+
+<br />
 <table class="table">
     <thead>
         <tr>
@@ -58,3 +65,5 @@
         }
             </tbody>
 </table>
+
+
